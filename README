@@ -1,0 +1,41 @@
+
+#
+# CISCO server
+#
+
+Create a small service that will accept json file with some data (anything, e.g. information about cars) at the rest API and store it somehow (preferably some in-memory DB, but up to you). Make another API endpoint to retrieve all stored items. Technology: use Java + any open source libraries you want.
+
+
+#
+# Building
+#
+
+Building with Ant. Use Java 8 from Oracle.
+
+ant compile;   # compile all source files
+ant war;       # compile source files and create WAR file
+ant tests;     # run all JUnit tests
+
+
+#
+# Deploying
+#
+
+Simply copy WAR file dist/cisco.war to your application server
+
+
+#
+# Documentation
+# 
+
+Please check HTML do documentation in doc/index.html. This documentation is part of WAR. After deploying open root URL {application.server}/cisco/ like http://localhost:8080/cisco/
+
+
+#
+# Test with curl
+#
+
+See shell file testWS.sh
+
+
+

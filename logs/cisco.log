@@ -1,0 +1,156 @@
+03.26 15:17:00 INFO  DBManagerTest DBManagerTest init()
+03.26 15:17:00 INFO  DBManager    DBManager init
+03.26 15:17:00 INFO  DBManager    DBManager connect
+03.26 15:17:01 INFO  DBManager    Connected database: HSQL Database Engine, 2.4.0
+03.26 15:17:01 DEBUG DBManager    Database driver: HSQL Database Engine Driver 2.4.0, JDBC: 4.2
+03.26 15:17:01 INFO  DBManager    DB connected in 0.285s
+03.26 15:17:01 INFO  DBManagerTest DBManagerTest init() - END
+03.26 15:17:01 INFO  DBManagerTest --------------------------------------------------------------------------
+03.26 15:17:01 INFO  DBManager    insert car - start
+03.26 15:17:01 INFO  DBManager    insert car - end - testVINCODE123
+03.26 15:17:01 INFO  DBManager    insert car - start
+03.26 15:17:01 INFO  DBManager    delete cars - start
+03.26 15:17:01 INFO  DBManager    delete cars - end - 1
+03.26 15:17:01 INFO  DBManager    insert car - start
+03.26 15:17:01 INFO  DBManager    insert car - end - testVINCODE123
+03.26 15:17:01 INFO  DBManager    select cars - start
+03.26 15:17:01 INFO  DBManager    select cars - end - 1
+03.26 15:17:01 INFO  DBManager    delete cars - start
+03.26 15:17:01 INFO  DBManager    delete cars - end - 1
+03.26 15:17:01 INFO  DBManager    insert car - start
+03.26 15:17:01 INFO  DBManager    delete cars - start
+03.26 15:17:01 INFO  DBManager    delete cars - end - 0
+03.26 15:17:01 INFO  DBManagerTest --------------------------------------------------------------------------
+03.26 15:17:01 INFO  DBManagerTest DBManagerTest close()
+03.26 15:17:01 INFO  DBManager    DBManager close
+03.26 15:17:01 INFO  DBManagerTest DBManagerTest close() - END
+03.26 15:17:10 INFO  DBManagerTest DBManagerTest init()
+03.26 15:17:10 INFO  DBManager    DBManager init
+03.26 15:17:10 INFO  DBManager    DBManager connect
+03.26 15:17:10 INFO  DBManager    Connected database: HSQL Database Engine, 2.4.0
+03.26 15:17:10 DEBUG DBManager    Database driver: HSQL Database Engine Driver 2.4.0, JDBC: 4.2
+03.26 15:17:10 INFO  DBManager    DB connected in 0.284s
+03.26 15:17:10 INFO  DBManagerTest DBManagerTest init() - END
+03.26 15:17:10 INFO  DBManagerTest --------------------------------------------------------------------------
+03.26 15:17:10 INFO  DBManager    insert car - start
+03.26 15:17:10 INFO  DBManager    insert car - end - testVINCODE123
+03.26 15:17:10 INFO  DBManager    insert car - start
+03.26 15:17:10 INFO  DBManager    delete cars - start
+03.26 15:17:10 INFO  DBManager    delete cars - end - 1
+03.26 15:17:10 INFO  DBManager    insert car - start
+03.26 15:17:10 INFO  DBManager    insert car - end - testVINCODE123
+03.26 15:17:10 INFO  DBManager    select cars - start
+03.26 15:17:10 INFO  DBManager    select cars - end - 1
+03.26 15:17:10 INFO  DBManager    delete cars - start
+03.26 15:17:10 INFO  DBManager    delete cars - end - 1
+03.26 15:17:10 INFO  DBManager    insert car - start
+03.26 15:17:10 INFO  DBManager    delete cars - start
+03.26 15:17:10 INFO  DBManager    delete cars - end - 0
+03.26 15:17:10 INFO  DBManagerTest --------------------------------------------------------------------------
+03.26 15:17:10 INFO  DBManagerTest DBManagerTest close()
+03.26 15:17:10 INFO  DBManager    DBManager close
+03.26 15:17:10 INFO  DBManagerTest DBManagerTest close() - END
+03.26 15:17:17 INFO  DBManagerTest DBManagerTest init()
+03.26 15:17:17 INFO  DBManager    DBManager init
+03.26 15:17:17 INFO  DBManager    DBManager connect
+03.26 15:17:18 INFO  DBManager    Connected database: HSQL Database Engine, 2.4.0
+03.26 15:17:18 DEBUG DBManager    Database driver: HSQL Database Engine Driver 2.4.0, JDBC: 4.2
+03.26 15:17:18 INFO  DBManager    DB connected in 0.279s
+03.26 15:17:18 INFO  DBManagerTest DBManagerTest init() - END
+03.26 15:17:18 INFO  DBManagerTest --------------------------------------------------------------------------
+03.26 15:17:18 INFO  DBManager    insert car - start
+03.26 15:17:18 INFO  DBManager    insert car - end - testVINCODE123
+03.26 15:17:18 INFO  DBManager    insert car - start
+03.26 15:17:18 INFO  DBManager    delete cars - start
+03.26 15:17:18 INFO  DBManager    delete cars - end - 1
+03.26 15:17:18 INFO  DBManager    insert car - start
+03.26 15:17:18 INFO  DBManager    insert car - end - testVINCODE123
+03.26 15:17:18 INFO  DBManager    select cars - start
+03.26 15:17:18 INFO  DBManager    select cars - end - 1
+03.26 15:17:18 INFO  DBManager    delete cars - start
+03.26 15:17:18 INFO  DBManager    delete cars - end - 1
+03.26 15:17:18 INFO  DBManager    insert car - start
+03.26 15:17:18 INFO  DBManager    delete cars - start
+03.26 15:17:18 INFO  DBManager    delete cars - end - 0
+03.26 15:17:18 INFO  DBManagerTest --------------------------------------------------------------------------
+03.26 15:17:18 INFO  DBManagerTest DBManagerTest close()
+03.26 15:17:18 INFO  DBManager    DBManager close
+03.26 15:17:18 INFO  DBManagerTest DBManagerTest close() - END
+03.26 15:20:30 INFO  DBManagerTest DBManagerTest init()
+03.26 15:20:30 INFO  DBManager    DBManager init
+03.26 15:20:30 INFO  DBManager    DBManager connect
+03.26 15:20:30 INFO  DBManager    Connected database: HSQL Database Engine, 2.4.0
+03.26 15:20:30 DEBUG DBManager    Database driver: HSQL Database Engine Driver 2.4.0, JDBC: 4.2
+03.26 15:20:30 INFO  DBManager    DB connected in 0.256s
+03.26 15:20:30 INFO  DBManagerTest DBManagerTest init() - END
+03.26 15:20:30 INFO  DBManagerTest --------------------------------------------------------------------------
+03.26 15:20:30 INFO  DBManager    insert car - start
+03.26 15:20:30 INFO  DBManager    insert car - end - testVINCODE123
+03.26 15:20:30 INFO  DBManager    insert car - start
+03.26 15:20:30 INFO  DBManager    delete cars - start
+03.26 15:20:30 INFO  DBManager    delete cars - end - 1
+03.26 15:20:30 INFO  DBManager    insert car - start
+03.26 15:20:30 INFO  DBManager    insert car - end - testVINCODE123
+03.26 15:20:30 INFO  DBManager    select cars - start
+03.26 15:20:30 INFO  DBManager    select cars - end - 1
+03.26 15:20:30 INFO  DBManager    delete cars - start
+03.26 15:20:30 INFO  DBManager    delete cars - end - 1
+03.26 15:20:30 INFO  DBManager    insert car - start
+03.26 15:20:30 INFO  DBManager    delete cars - start
+03.26 15:20:30 INFO  DBManager    delete cars - end - 0
+03.26 15:20:30 INFO  DBManagerTest --------------------------------------------------------------------------
+03.26 15:20:30 INFO  DBManagerTest DBManagerTest close()
+03.26 15:20:30 INFO  DBManager    DBManager close
+03.26 15:20:30 INFO  DBManagerTest DBManagerTest close() - END
+03.26 15:21:32 INFO  DBManagerTest DBManagerTest init()
+03.26 15:21:32 INFO  DBManager    DBManager init
+03.26 15:21:32 INFO  DBManager    DBManager connect
+03.26 15:21:32 INFO  DBManager    Connected database: HSQL Database Engine, 2.4.0
+03.26 15:21:32 DEBUG DBManager    Database driver: HSQL Database Engine Driver 2.4.0, JDBC: 4.2
+03.26 15:21:32 INFO  DBManager    DB connected in 0.27s
+03.26 15:21:32 INFO  DBManagerTest DBManagerTest init() - END
+03.26 15:21:32 INFO  DBManagerTest --------------------------------------------------------------------------
+03.26 15:21:32 INFO  DBManager    insert car - start
+03.26 15:21:32 INFO  DBManager    insert car - end - testVINCODE123
+03.26 15:21:32 INFO  DBManager    insert car - start
+03.26 15:21:32 INFO  DBManager    delete cars - start
+03.26 15:21:32 INFO  DBManager    delete cars - end - 1
+03.26 15:21:32 INFO  DBManager    insert car - start
+03.26 15:21:32 INFO  DBManager    insert car - end - testVINCODE123
+03.26 15:21:32 INFO  DBManager    select cars - start
+03.26 15:21:32 INFO  DBManager    select cars - end - 1
+03.26 15:21:32 INFO  DBManager    delete cars - start
+03.26 15:21:32 INFO  DBManager    delete cars - end - 1
+03.26 15:21:32 INFO  DBManager    insert car - start
+03.26 15:21:32 INFO  DBManager    delete cars - start
+03.26 15:21:32 INFO  DBManager    delete cars - end - 0
+03.26 15:21:32 INFO  DBManagerTest --------------------------------------------------------------------------
+03.26 15:21:32 INFO  DBManagerTest DBManagerTest close()
+03.26 15:21:32 INFO  DBManager    DBManager close
+03.26 15:21:32 INFO  DBManagerTest DBManagerTest close() - END
+03.26 15:28:47 INFO  DBManagerTest DBManagerTest init()
+03.26 15:28:47 INFO  DBManager    DBManager init
+03.26 15:28:47 INFO  DBManager    DBManager connect
+03.26 15:28:47 INFO  DBManager    Connected database: HSQL Database Engine, 2.4.0
+03.26 15:28:47 DEBUG DBManager    Database driver: HSQL Database Engine Driver 2.4.0, JDBC: 4.2
+03.26 15:28:47 INFO  DBManager    DB connected in 0.281s
+03.26 15:28:47 INFO  DBManagerTest DBManagerTest init() - END
+03.26 15:28:47 INFO  DBManagerTest --------------------------------------------------------------------------
+03.26 15:28:47 INFO  DBManager    insert car - start
+03.26 15:28:47 INFO  DBManager    insert car - end - testVINCODE123
+03.26 15:28:47 INFO  DBManager    insert car - start
+03.26 15:28:47 INFO  DBManager    delete cars - start
+03.26 15:28:47 INFO  DBManager    delete cars - end - 1
+03.26 15:28:47 INFO  DBManager    insert car - start
+03.26 15:28:47 INFO  DBManager    insert car - end - testVINCODE123
+03.26 15:28:47 INFO  DBManager    select cars - start
+03.26 15:28:47 INFO  DBManager    select cars - end - 1
+03.26 15:28:47 INFO  DBManager    delete cars - start
+03.26 15:28:47 INFO  DBManager    delete cars - end - 1
+03.26 15:28:47 INFO  DBManager    insert car - start
+03.26 15:28:47 INFO  DBManager    delete cars - start
+03.26 15:28:47 INFO  DBManager    delete cars - end - 0
+03.26 15:28:47 INFO  DBManagerTest --------------------------------------------------------------------------
+03.26 15:28:47 INFO  DBManagerTest DBManagerTest close()
+03.26 15:28:47 INFO  DBManager    DBManager close
+03.26 15:28:47 INFO  DBManagerTest DBManagerTest close() - END

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<project name="Cisco" basedir="." default="war">
+
+  <!-- Variables   -->
+  <property name="product" value="cisco"/>
+  <property name="src.dir" location="src"/>
+  <property name="srcTest.dir" location="srcTest"/>
+  <property name="etc.dir" location="etc"/>
+  <property name="lib.dir" location="lib"/>
+  <property name="libTest.dir" location="libTest"/>
+  <property name="doc.dir" location="doc"/>
+  <property name="build.dir" location="dist"/>
+
+  <!-- Path        -->
+  <path id="build.classpath">
+    <fileset dir="${lib.dir}">
+      <include name="**/*.jar"/>
+    </fileset>
+  </path>
+
+
+  <!-- Path        -->
+  <path id="buildTest.classpath">
+    <fileset dir="${lib.dir}">
+      <include name="**/*.jar"/>
+    </fileset>
+    <fileset dir="${libTest.dir}">
+      <include name="**/*.jar"/>
+    </fileset>
+  </path>
+
+  <!-- Clean environment -->
+  <target name="clean">
+    <delete dir="${build.dir}"/>
+  </target>
+
+  <!-- Compile          -->
+  <target name="compile" depends="clean">
+    <mkdir dir="${build.dir}"/>
+    <javac srcdir="${src.dir}" source="1.8" target="1.8" debug="true" destdir="${build.dir}" classpathref="build.classpath" includeantruntime="false" encoding="UTF-8"/>
+  </target>
+
+  <!-- Compile JUnit tests         -->
+  <target name="compile.tests" depends="compile">
+    <copy file="${etc.dir}/log4j.xml" tofile="${build.dir}/log4j2.xml"/>
+    <javac srcdir="${srcTest.dir}" source="1.8" target="1.8" debug="true" destdir="${build.dir}" classpathref="buildTest.classpath" includeantruntime="false" encoding="UTF-8"/>
+  </target>
+
+  <!-- JUnit tests         -->
+  <target name="tests" depends="compile.tests">
+    <junit fork="yes" printsummary="yes" haltonfailure="yes" showoutput="yes">
+      <classpath>
+        <pathelement location="${build.dir}" />
+        <pathelement location="${etc.dir}" />
+        <path refid="buildTest.classpath" />
+      </classpath>
+      <formatter type="plain" usefile="no"/>
+
+      <batchtest>
+        <fileset dir="${srcTest.dir}">
+          <include name="**/*Test.java"/>
+        </fileset>
+      </batchtest>
+    </junit>
+  </target>
+
+  <!-- Generate WAR        -->
+  <target name="server" depends="compile">
+    <copy file="${etc.dir}/log4j.xml" tofile="${build.dir}/log4j2.xml"/>
+    <copy file="${doc.dir}/index.html" todir="${build.dir}"/>
+    
+    <war destfile="${build.dir}/${product}.war" webxml="web/WEB-INF/web.xml">
+      <classes dir="${build.dir}"/>
+      <classes file="${etc.dir}/version.properties"/>
+      <lib dir="${lib.dir}"/>
+    </war>
+  </target>
+
+  <!-- Main targets -->
+  <target name="war">
+    <antcall target="tests"/>
+    <antcall target="server"/>
+  </target>
+
+  <target name="deploy">
+    <antcall target="war"/>
+    <copy file="${build.dir}/${product}.war" todir="/usr/local/apache-tomcat-8.0.23/webapps/"/>
+  </target>
+
+</project>

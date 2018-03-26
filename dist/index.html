@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <title>CISCO web services API</title>
+  <style>
+
+body {
+    font: monospace;
+    font-family: monospace;
+    width:1000px;
+} 
+
+h1, h2, h3 {
+    border-bottom: 1px solid;
+}
+ 
+h3 {
+    margin-top: 3.5em;
+    page-break-after: avoid;
+}
+
+h2, h4, h5, h6 {
+    margin-top: 2em;
+    page-break-after: avoid;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 1.9em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+
+table {
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    margin: 2em;
+    border-color: #666666;
+    border-collapse: collapse;
+}
+
+table th {
+    border-width: 1px;
+    padding: 4px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #dedede;
+}
+
+
+table tr.odd {
+    background-color: #ffffff;
+}
+table tr.even {
+    background-color: #f6f6f6;
+}
+
+table td {
+    border-width: 1px;
+    padding: 4px;
+    border-style: solid;
+    border-color: #666666;
+}
+
+pre, code {
+    white-space: pre-wrap;
+    margin: 0.9em;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    background: #faf8f0;
+}
+
+#content pre, code {
+    display: block;
+    border: 1px solid #bebab0;
+}
+  </style>
+</head>
+<base href="http://localhost:8080/cisco/"/>
+<body>
+
+<h1>CISCO Web Services API</h1>
+
+<p>This document describes REST web services that are published by CISCO server.</p>
+
+<h2>Supported commands</h2>
+<ul>
+  <li><a href="#commandGetHealthy">GET /healthy</a></li>
+  <li><a href="#commandGetCars">GET /cars</a></li>
+  <li><a href="#commandPostCars">POST /cars</a></li>
+</ul>
+
+
+
+<a name="commandGetHealthy"/>
+<h3>GET /healthy</h3>
+
+<p>Simple web service without input parameters to <b>get</b> server health status.</p>
+
+<p><a href="healthy">http://localhost:8080/cisco/healthy</a></p>
+
+<h4>Response</h4>
+
+<p><strong>HTTP code - 200</strong> CISCO server is running.</p>
+<p><strong>HTTP code - 400</strong> CISCO server is not healthy. Probably database is down.</p>
+<p><strong>HTTP code - 500</strong> CISCO server is down.</p>
+
+
+
+
+<a name="commandGetCars"/>
+<h3>GET /cars</h3>
+
+<p>Web service without input parameters to <b>get</b> all saved cars.</p>
+
+<p><a href="cars">http://localhost:8080/cisco/cars</a></p>
+
+<h4>Response</h4>
+
+<p><strong>HTTP code - 200</strong> Return JSON structure with saved cars.</p>
+<code>[
+    {
+        "brand": "Ford",
+        "model": "Focus",
+        "price": 456000,
+        "vin": "ABC1234"
+    },
+    {
+        "brand": "BMW",
+        "model": "X5",
+        "price": 877000,
+        "vin": "ASD6789"
+    },
+    {
+        "brand": "Peugeot",
+        "model": "5008",
+        "price": 577000,
+        "vin": "QWE2343"
+    }
+]</code>
+
+<p><strong>HTTP code - 500</strong> Internal server error. Cannot select cars.</p>
+
+
+
+
+
+<a name="commandPostCars"/>
+<h3>POST /cars</h3>
+
+<p>Web service to <b>save</b> all cars from input JSON.</p>
+
+<p><a href="cars">http://localhost:8080/cisco/cars</a></p>
+
+<h4>Input parameters</h4>
+
+<p>WS require JSON structure with cars as input stream.</p>
+<code>[
+    {
+        "brand": "Ford",
+        "model": "Focus",
+        "price": 456000,
+        "vin": "ABC1234"
+    },
+    {
+        "brand": "BMW",
+        "model": "X5",
+        "price": 877000,
+        "vin": "ASD6789"
+    },
+    {
+        "brand": "Peugeot",
+        "model": "5008",
+        "price": 577000,
+        "vin": "QWE2343"
+    }
+]</code>
+
+
+
+<h4>Response</h4>
+
+<p><strong>HTTP code - 200</strong> Cars were successfully saved.</p>
+<code>{ "status": "Saved", "message":"Successfully inserted 3 cars" }</code>
+
+<p><strong>HTTP code - 400</strong> Wrong input parameters. For example missing required parameter.</p>
+<p><strong>HTTP code - 500</strong> Internal server error. Cannot process web service.</p>
+
+
+</body>

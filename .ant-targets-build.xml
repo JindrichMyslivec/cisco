@@ -1,0 +1,7 @@
+clean
+compile
+compile.tests
+deploy
+server
+tests
+war

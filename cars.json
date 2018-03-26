@@ -1,0 +1,20 @@
+[
+    {
+        "brand": "Ford",
+        "model": "Focus",
+        "price": 456000,
+        "vin": "ABC1234"
+    },
+    {
+        "brand": "BMW",
+        "model": "X5",
+        "price": 877000,
+        "vin": "ASD6789"
+    },
+    {
+        "brand": "Peugeot",
+        "model": "5008",
+        "price": 577000,
+        "vin": "QWE2343"
+    }
+]
