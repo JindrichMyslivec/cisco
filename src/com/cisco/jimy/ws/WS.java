@@ -5,8 +5,6 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpRetryException;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -33,15 +31,13 @@ public abstract class WS implements Constants {
     /** Text output stream for JSON resource */
     protected PrintWriter outWriter = null;
 
-    protected Map<String, String> parameters = new HashMap<String, String>();
-
     /**
      * 
      * @param request
      * @param response
      * @throws IOException
      */
-    public WS(HttpServletRequest request, HttpServletResponse response, boolean getUser) throws IOException {
+    public WS(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.request = request;
         this.response = response;
         // Disable caching

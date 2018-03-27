@@ -17,12 +17,8 @@ import org.apache.logging.log4j.Logger;
 public abstract class WSJSON extends WS {
     protected static Logger log = LogManager.getLogger(WSJSON.class);
 
-    public WSJSON(HttpServletRequest request, HttpServletResponse response, boolean getUser) throws IOException {
-        super(request, response, getUser);
-    }
-
     public WSJSON(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        super(request, response, true);
+        super(request, response);
     }
 
     protected abstract String getJSON() throws HttpRetryException, Exception;

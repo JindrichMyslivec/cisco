@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 public class WSGetDocumentation extends WS {
 
     public WSGetDocumentation(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        super(request, response, true);
+        super(request, response);
     }
 
     @Override

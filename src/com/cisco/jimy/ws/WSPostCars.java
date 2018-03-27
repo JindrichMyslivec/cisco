@@ -46,11 +46,11 @@ public class WSPostCars extends WSJSON implements Constants {
 
         if (json == null || json.toString().trim().isEmpty()) throw new HttpRetryException("Missing required JSON.", 400);
 
-        log.info("POST /cars JSON: " + json);
+        log.debug("POST /cars JSON: " + json);
 
         List<Car> cars = jsonMapper.readValue(json.toString(), new TypeReference<List<Car>>() {
         });
-        synchronized (DBManager.getInstance()) {
+        synchronized (DBManager.class) {
             try {
                 for (Car car : cars) {
                     DBManager.insertCar(car.getVIN(), car.getBrand(), car.getModel(), car.getPrice());

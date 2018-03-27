@@ -105,8 +105,7 @@ public class DBManagerTest implements Constants {
             // insert
             DBManager.insertCar("';delete from cars;'", "", "", 123);
             Assert.fail("Inserted dangerous chars in SQL.");
-        } catch (SQLException exc) {
-        } finally {
+        } catch (SQLException exc) {} finally {
             try {
                 DBManager.deleteCars();
             } catch (SQLException exc) {
@@ -114,5 +113,4 @@ public class DBManagerTest implements Constants {
             }
         }
     }
-
 }

@@ -88,7 +88,7 @@ public class DBManager implements Constants {
                 + meta.getJDBCMajorVersion()
                 + "." + meta.getJDBCMinorVersion());
 
-        log.info("DB connected in " + ((System.currentTimeMillis() - time) / 1000.0d) + "s");
+        log.debug("DB connected in " + ((System.currentTimeMillis() - time) / 1000.0d) + "s");
 
         // create schema
         Statement stmt = null;
@@ -169,7 +169,7 @@ public class DBManager implements Constants {
      * @throws SQLException
      */
     public static synchronized List<Car> selectCars() throws SQLException {
-        log.info("select cars - start");
+        log.debug("select cars - start");
         List<Car> cars = new ArrayList<Car>();
         Statement stmt = null;
         ResultSet rs = null;
@@ -187,7 +187,7 @@ public class DBManager implements Constants {
         } finally {
             closeResultSets(rs);
             closeStatements(stmt);
-            log.info("select cars - end - " + cars.size());
+            log.debug("select cars - end - " + cars.size());
         }
         return cars;
     }
@@ -213,7 +213,7 @@ public class DBManager implements Constants {
      * @throws SQLException
      */
     public static synchronized void insertCar(String vin, String brand, String model, int price) throws SQLException {
-        log.info("insert car - start");
+        log.debug("insert car - start");
         checkParameters(vin, brand, model);
         getInstance().psInsertCar.setString(1, vin);
         getInstance().psInsertCar.setString(2, brand);
@@ -222,7 +222,7 @@ public class DBManager implements Constants {
         int rows = getInstance().psInsertCar.executeUpdate();
         if (rows != 1) throw new SQLException(
                 "Cannot insert car record into DB. Returned rows '" + rows + "'.");
-        log.info("insert car - end - " + vin);
+        log.debug("insert car - end - " + vin);
     }
 
     /**
@@ -232,9 +232,9 @@ public class DBManager implements Constants {
      * @throws SQLException
      */
     public static synchronized int deleteCars() throws SQLException {
-        log.info("delete cars - start");
+        log.debug("delete cars - start");
         int rows = getInstance().psDeleteCars.executeUpdate();
-        log.info("delete cars - end - " + rows);
+        log.debug("delete cars - end - " + rows);
         return rows;
     }
 

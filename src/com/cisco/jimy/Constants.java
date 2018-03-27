@@ -9,8 +9,6 @@ import java.nio.charset.Charset;
  */
 public interface Constants {
 
-    public static final String SERVER_CTX = "koreServer";
-
     public static final String COMMAND_GET_HEALTHY = "/healthy";
     public static final String COMMAND_POST_CARS = "/cars";
     public static final String COMMAND_GET_CARS = "/cars";
